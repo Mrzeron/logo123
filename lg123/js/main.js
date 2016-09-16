@@ -17,10 +17,10 @@ $(function(){
     spbPosition();
     function spbPosition(){
         var i=0;
-        $('.spb').each(function(){
+      /*  $('.spb').each(function(){
             $(this).css({"left":i*250+200});
             i++;
-        })
+        })*/
     };
 
     $(".owl-demo")

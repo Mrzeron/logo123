@@ -5,108 +5,93 @@ body{
 #header{
   position: relative;
   height: 57px;
-  width: 100%;
+
   background: #222;
-  p{
-    color:#ccc;
-    font-size: 22px;
-    margin-left: 300px;
-  }
-  .startDesign{
-    position: absolute;
-    top:450px;
-    left:42%;
-    color:#fff;font-size: 28px;
-    padding: 8px 20px;
-    background:-webkit-linear-gradient(top, #f17932, #ea5700);
-    border-radius: 4px;
-    i{
-      margin-left: 5px;
-    }
-  }
-}
-$navhover:#08c;
-.nava{
-  padding-left: 100px;
-  height: 57px;
-  background: rgba(0,0,0,0.25);
-  a{
-    font-size: 14px;
-    color:#fff;
-    padding: 20px;
-    line-height: 57px;
-
-    &:hover{
-      background: $navhover;
-    }
-    i{
-      margin-right: 5px;
-    }
-
-
-  }
-  .btn_start{
-    margin-left: 20px;
-    padding:10px 10px;
-    /*background: #ea5700;*/
-    background:-webkit-linear-gradient(top, #f17932, #ea5700);
-    border-radius: 4px;
-  }
-  .btn_start:hover{
-    background: #ea5700;
-  }
-
-  .myLogin{
-    margin-left: 500px;
-  }
-}
-.logo{
-  position: absolute;
-  top:0;
-  left: 46%;
-  img{top:20px;}
-  .img1{
-    position: absolute;
-    z-index: 2;
-  }
-  .img2{
-    position: absolute;
-    opacity: 0;
-    z-index: 2;
-  }
-}
-#btnOn{
-  position: absolute;
-  top:0;
-  left: 45%;
-  border: 2px solid #FFF;
-  border-radius: 50%;
-  width: 92px;
-  height: 96px;
-  display: block;
-  background: rgba(0,0,0,1);
-  z-index: 1;
-}
-#trbtn{
-  position: absolute;
-  top:0;
-  left: 45%;
-  border: 2px solid #FFF;
-  border-radius: 50%;
-  width: 92px;
-  height: 96px;
-  display: block;
-  background: rgba(0,0,0,0);
-  z-index: 10;
-}
-.bt{
-  font-size: 40px;
-  color:#fff;
-  text-align: center;
+  $navhover:#08c;
+  .nava{
   width: 1024px;
-  margin: 49px  auto;
-  margin-top: 150px;
+    margin: 0 auto;
+    height: 57px;
+    background: rgba(0,0,0,0.25);
+    a{
+      font-size: 14px;
+      color:#fff;
+      padding: 20px;
+      line-height: 57px;
+
+      &:hover{
+        background: $navhover;
+      }
+      i{
+        margin-right: 5px;
+      }
+
+
+    }
+    .btn_start{
+      margin-left: 20px;
+      padding:10px 10px;
+      /*background: #ea5700;*/
+      background:-webkit-linear-gradient(top, #f17932, #ea5700);
+      border-radius: 4px;
+    }
+    .btn_start:hover{
+      background: #ea5700;
+    }
+
+    .myLogin{
+      margin-left: 300px;
+    }
+  }
+  .logo{
+    position: absolute;
+    top:0;
+    left: 49%;
+    img{top:20px;}
+    .img1{
+      position: absolute;
+      z-index: 2;
+    }
+    .img2{
+      position: absolute;
+      opacity: 0;
+      z-index: 2;
+    }
+  }
+  #btnOn{
+    position: absolute;
+    top:0;
+    left: 48%;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    width: 92px;
+    height: 96px;
+    display: block;
+    background: rgba(0,0,0,1);
+    z-index: 1;
+  }
+  #trbtn{
+    position: absolute;
+    top:0;
+    left: 48%;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    width: 92px;
+    height: 96px;
+    display: block;
+    background: rgba(0,0,0,0);
+    z-index: 10;
+  }
+  .bt{
+    font-size: 40px;
+    color:#fff;
+    text-align: center;
+    width: 1024px;
+    margin: 49px  auto;
+    margin-top: 150px;
+  }
 }
+
 .typed-cursor{
   opacity: 1;
   -webkit-animation: blink 0.7s infinite;
@@ -267,7 +252,7 @@ $navhover:#08c;
   padding: 64px 15px;
   background: url(../startImg/pattern.png) #ECEEF1;
   .main{
-    width: 780px;
+    width: 800px;
     margin: 0 auto;
     padding: 0;
     .main-title{

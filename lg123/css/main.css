@@ -16,7 +16,6 @@ ul, li {
 #header {
   position: relative;
   height: 670px;
-  width: 100%;
   background: url("../images/background123.jpg") no-repeat center -10px; }
   #header p {
     color: #ccc;
@@ -33,62 +32,59 @@ ul, li {
     border-radius: 4px; }
     #header .startDesign i {
       margin-left: 5px; }
-
-.nava {
-  padding-left: 100px;
-  height: 57px;
-  background: rgba(0, 0, 0, 0.25); }
-  .nava a {
-    font-size: 14px;
-    color: #fff;
-    padding: 20px;
-    line-height: 57px; }
-    .nava a:hover {
-      background: #08c; }
-    .nava a i {
-      margin-right: 5px; }
-  .nava .btn_start {
-    margin-left: 20px;
-    padding: 10px 10px;
-    /*background: #ea5700;*/
-    background: -webkit-linear-gradient(top, #f17932, #ea5700);
-    border-radius: 4px; }
-  .nava .btn_start:hover {
-    background: #ea5700; }
-  .nava .myLogin {
-    margin-left: 500px; }
-
-.logo {
-  position: absolute;
-  top: 0;
-  left: 46%; }
-  .logo img {
-    top: 20px; }
-  .logo .img1 {
-    position: absolute; }
-  .logo .img2 {
+  #header .nava {
+    width: 1024px;
+    margin: 0 auto;
+    height: 57px;
+    background: rgba(0, 0, 0, 0.25); }
+    #header .nava a {
+      font-size: 14px;
+      color: #fff;
+      padding: 20px;
+      line-height: 57px; }
+      #header .nava a:hover {
+        background: #08c; }
+      #header .nava a i {
+        margin-right: 5px; }
+    #header .nava .btn_start {
+      margin-left: 20px;
+      padding: 10px 10px;
+      /*background: #ea5700;*/
+      background: -webkit-linear-gradient(top, #f17932, #ea5700);
+      border-radius: 4px; }
+    #header .nava .btn_start:hover {
+      background: #ea5700; }
+    #header .nava .myLogin {
+      margin-left: 300px; }
+  #header .logo {
     position: absolute;
-    opacity: 0; }
-
-#btnOn {
-  position: absolute;
-  top: 0;
-  left: 45%;
-  border: 2px solid #FFF;
-  border-radius: 50%;
-  width: 92px;
-  height: 96px;
-  display: block;
-  background: rgba(0, 0, 0, 0.25);
-  z-index: 999; }
-
-.bt {
-  font-size: 40px;
-  color: #fff;
-  text-align: center;
-  width: 1024px;
-  margin: 49px  auto;
-  margin-top: 150px; }
+    top: 0;
+    left: 49%; }
+    #header .logo img {
+      top: 20px; }
+    #header .logo .img1 {
+      position: absolute; }
+    #header .logo .img2 {
+      position: absolute;
+      opacity: 0; }
+  #header #btnOn {
+    position: absolute;
+    top: 0;
+    left: 48%;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    width: 92px;
+    height: 96px;
+    display: block;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 999; }
+  #header .bt {
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    width: 1024px;
+    margin: 49px  auto;
+    margin-top: 150px; }
 
 .typed-cursor {
   opacity: 1;
@@ -123,16 +119,22 @@ ul, li {
   height: 161px;
   width: 100%;
   background: url("../images/pattern.jpg"); }
-  .dashboard .spb {
-    position: absolute;
-    text-align: center; }
-    .dashboard .spb .totaldesigns .num {
-      font-size: 40px;
-      margin-right: 5px; }
-    .dashboard .spb .totaldesigns span {
-      font-size: 20px; }
-    .dashboard .spb p {
-      font-size: 20px; }
+  .dashboard .midz {
+    max-width: 1020px;
+    margin: 0 auto; }
+    .dashboard .midz .spb {
+      float: left;
+      margin-right: 15%;
+      text-align: center; }
+      .dashboard .midz .spb:nth-child(4) {
+        margin-right: 0; }
+      .dashboard .midz .spb .totaldesigns .num {
+        font-size: 40px;
+        margin-right: 5px; }
+      .dashboard .midz .spb .totaldesigns span {
+        font-size: 20px; }
+      .dashboard .midz .spb p {
+        font-size: 20px; }
 
 .caselist {
   padding: 0 5px 64px 5px;
