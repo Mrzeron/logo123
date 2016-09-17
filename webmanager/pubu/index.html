@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+      /*  #box {
+            width: 800px;
+            margin: 0 auto;
+            background: lavender;
+            position: relative;
+        }*/
+
+        #more {
+            position: fixed;
+            top: 0;
+            left: 20px;
+        }
+        #add{  position: fixed;
+            top: 20px;
+            left: 20px;}
+        #cols{
+            position: fixed;
+            top:40px;
+            left: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<input type="button" id="more" value="加载更多图片"/>
+<input type="text" id="cols" >
+<input type="button" id="add" value="确定加载列数">
+
+
+<div id="box"></div>
+<script>
+    var oBox = document.getElementById('box');
+    var oMore = document.getElementById('more');
+    var oAdd =document.getElementById('add');
+    var oCols =document.getElementById('cols');
+    var num = 0;
+    var minY = [];
+    var positionLeft = [];
+    oMore.onclick =function(){
+        load()
+
+    }
+    oAdd.onclick=function(){
+        var nowcols =parseInt(oCols.value);
+        load(nowcols)
+    }
+
+    function load(cols){
+       if(!cols){
+            cols=4;
+        }
+        num++;
+        if(num>5){
+            num=2;
+        }
+        var index = 0;
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+                if (xhr.status == 200) {
+                    var resultArr = eval("(" + xhr.responseText + ")");
+                    for (var i = 0; i < resultArr.length; i++) {
+                        var oImg = document.createElement('img');
+                        oImg.style.width = "200px";
+                        oImg.style.height = resultArr[i].height + 'px';
+                        oImg.style.position = "absolute";
+                        oImg.style.border = "none";
+                        oImg.name = resultArr[i].name;
+                        oImg.src = "http://localhost/pubu/img/" + resultArr[i].url;
+                       /* console.log(minY.length)
+                        console.log(cols)*/
+                        if (minY.length == cols) {
+                            var minobj = arrmin(minY);
+                            oImg.style.left = minobj.leftIndex * 200 + 'px';
+                            oImg.style.top = minobj.min + 'px';
+                            minY[minobj.leftIndex] = parseInt(oImg.style.top) + parseInt(oImg.style.height);
+                            //console.log(1)
+                        }
+                        if (num == 1 && index < cols) {
+                            oImg.style.left = index * 200 + 'px';
+                            //console.log(oImg.style.left)
+                            minY.push(parseInt(oImg.style.height));
+                            positionLeft.push(parseInt(oImg.style.left));
+                            /* console.log(minY)
+                             console.log(positionLeft);*/
+                        }
+                        index++;
+                        oBox.appendChild(oImg);
+                    }
+                }
+            }
+
+        }
+        xhr.open("get", "data/imgdata" + num + ".json", true);
+        xhr.send();
+
+    }
+    function arrmin(arr) {
+        var obj = {};
+        var min = arr[0];
+        for (var i = 0; i < arr.length; i++) {
+            if (min < arr[i]) {
+                obj.min = min;
+                obj.leftIndex = arr.indexOf(min);
+            } else {
+                min = arr[i];
+                obj.min = min;
+                obj.leftIndex = i;
+            }
+        }
+        obj.min = min;
+        return obj;
+    }
+
+</script>
+
+<script>
+
+    /* oBox.innerHTML+='<img src="img/'+resultArr[i].url+'"style="position:absolute;width:'+resultArr[i].width+'px;height:'+resultArr[i].height+'px;left: '+(i%4)*200+'px;" name='+resultArr[i].name+'/>'*/
+</script>
+</body>
+</html>

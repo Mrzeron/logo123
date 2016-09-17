@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>InterfaceTest</title>
+</head>
+
+<body>
+    <label for="#">Uid</label>
+    <input type="text" id="Uid">
+    <label for="#">图片地址</label>
+    <input type="text" id="url">
+    <label for="#">名称</label>
+    <input type="text" id="name">
+    <label for="#">价格</label>
+    <input type="text" id="price">
+    <input type="button" value="提交" id="btn">
+    <script src="jquery-3.0.0.min.js"></script>
+    <script>
+    $("#btn").click(function() {
+        var url = "../product/CreateUpdateProduct_get";
+        var jsonval = {
+            id: $("#Uid").val(),
+            url: $("#url").val(),
+            name: $("#name").val(),
+            price: $("#price").val()
+
+        }
+        var str = JSON.stringify(jsonval);
+        $.ajax(url, {
+            data: {
+                id: $("#Uid").val(),
+                datajson: str
+            },
+            success: function() {
+                alert(str)
+            }
+        })
+    });
+    </script>
+</body>
+
+</html>
